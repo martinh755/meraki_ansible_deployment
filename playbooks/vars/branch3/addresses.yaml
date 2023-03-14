@@ -1,0 +1,28 @@
+--- 
+ subnet-1:
+    network_name: Branch-3
+    name: Management
+    vlan_id: 1
+    subnet: 10.0.13.0/24
+    default_gw: 10.0.13.1
+
+ subnet-2:
+    network_name: Branch-3
+    name: Corp
+    vlan_id: 10
+    subnet: 10.10.13.0/24
+    default_gw: 10.10.13.1
+
+ subnet-3:
+    network_name: Branch-3
+    name: User
+    vlan_id: 20
+    subnet: 10.20.13.0/24
+    default_gw: 10.20.13.1
+
+ subnet-4:
+    network_name: Branch-3
+    name: IOT
+    vlan_id: 30
+    subnet: 10.30.13.0/24
+    default_gw: 10.30.13.1
