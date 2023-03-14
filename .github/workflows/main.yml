@@ -1,4 +1,4 @@
-name: CICD  
+name: CICD  # feel free to pick your own name
 
 on:
   push:
