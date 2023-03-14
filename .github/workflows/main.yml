@@ -1,4 +1,4 @@
-name: CICD  
+name: CICD  # feel free to pick your own name
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
       - 'playbooks/vars/**'
 
 jobs:
-  lint:
+  build:
 
     runs-on: ubuntu-latest
 
@@ -20,11 +20,7 @@ jobs:
       # replace "master" with any valid ref
       uses: ansible/ansible-lint-action@main
       with:
-        targets: |
-           playbooks/deploy-branch-readyaml.yaml
-        override-deps: |
-          ansible==2.8
-          ansible-lint==4.2.0
+        path: playbooks/deploy-branch-readyaml.yaml
         
     - shell: bash
       env:
