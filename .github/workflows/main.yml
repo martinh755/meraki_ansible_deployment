@@ -26,4 +26,4 @@ jobs:
     - shell: bash
       env:
         auth: ${{ secrets.MERAKIAPI }}
-      run: sh playbooks/deploy-branch-readyaml.yaml
+      run: sh playbooks/vars/branch3/deploy-branch-readyaml.yaml
