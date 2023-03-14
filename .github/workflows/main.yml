@@ -22,9 +22,6 @@ jobs:
       with:
         targets: |
            playbooks/deploy-branch-readyaml.yaml
-        override-deps: |
-          ansible==2.8
-          ansible-lint==4.2.0
         
     - shell: bash
       env:
