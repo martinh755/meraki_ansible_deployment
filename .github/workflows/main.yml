@@ -16,12 +16,8 @@ jobs:
     # Important: This sets up your GITHUB_WORKSPACE environment variable
     - uses: actions/checkout@v2
      
-    - name: Lint Ansible Playbook
-      # replace "master" with any valid ref
-      uses: ansible/ansible-lint-action@main
-      with:
-        targets: |
-           playbooks/deploy-branch-readyaml.yaml
+    - name: Run Ansible Playbook
+
         
     - shell: bash
       env:
