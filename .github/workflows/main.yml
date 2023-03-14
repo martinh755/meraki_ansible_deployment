@@ -20,7 +20,7 @@ jobs:
       # replace "master" with any valid ref
       uses: ansible/ansible-lint-action@main
       with:
-        targets: |
+        path: |
            playbooks/deploy-branch-readyaml.yaml
         
     - shell: bash
