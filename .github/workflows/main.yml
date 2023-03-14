@@ -20,9 +20,9 @@ jobs:
       # replace "master" with any valid ref
       uses: ansible/ansible-lint-action@main
       with:
-        path: 
+        path: |
            playbooks/deploy-branch-readyaml.yaml
-           
+        
     - shell: bash
       env:
         auth: ${{ secrets.MERAKIAPI }}
