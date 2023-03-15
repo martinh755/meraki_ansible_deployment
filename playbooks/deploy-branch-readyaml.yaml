@@ -4,19 +4,15 @@
   vars:
     auth_key: "{{ auth }}"
     org_name: "{{ org }}"
-
   tasks:
-
     - name: include variables for devices
       include_vars:
         file: devices.yaml
         name: devices
-
     - name: include variables for addresses
       include_vars:
         file: addresses.yaml
         name: addresses
-
     - name: Create site network
       meraki_network:
         auth_key: "{{ auth_key }}"
@@ -30,7 +26,6 @@
       register: off_network
       loop: "{{ lookup('dict', devices, wantlist=True) }}"
       when: "'device-1' in item.key"
-
     - name: Add devices to Network
       meraki_device:
         auth_key: "{{ auth_key }}"
@@ -40,7 +35,6 @@
         serial: "{{ item.value.serial_no }}"
       register: off_add_dev1
       loop: "{{ lookup('dict', devices, wantlist=True) }}"
-
     - name: Update device Information
       meraki_device:
         auth_key: "{{ auth_key }}"
@@ -52,8 +46,6 @@
         move_map_marker: no
       register: off_update_dev1
       loop: "{{ lookup('dict', devices, wantlist=True) }}"
-
-
     - name: Bind a template from a network
       meraki_config_template:
         auth_key: "{{ auth_key }}"
@@ -64,7 +56,6 @@
       delegate_to: localhost
       loop: "{{ lookup('dict', devices, wantlist=True) }}"
       when: "'device-1' in item.key"
-
     - name: Add subnets
       meraki_vlan:
         auth_key: "{{ auth_key }}"
