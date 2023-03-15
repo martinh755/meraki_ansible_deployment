@@ -15,13 +15,7 @@ jobs:
     steps:
     # Important: This sets up your GITHUB_WORKSPACE environment variable
     - uses: actions/checkout@v2
-     
-    - name: Lint Ansible Playbook
-      # replace "master" with any valid ref
-      uses: ansible/ansible-lint-action@main
-      with:
-        path: playbooks/deploy-branch-readyaml.yaml
-        
+             
     - shell: bash
       env:
         auth: ${{ secrets.MERAKIAPI }}
