@@ -19,3 +19,9 @@
     template_name: MR44-Deploy
     device_type: MR44
     serial_no: Q3AL-AY89-LGP4
+
+ device-3:
+    network_name:  Branch1
+    template_name: MS250-Deploy
+    device_type: MS250
+    serial_no: Q2LW-8Y6X-NFF2
