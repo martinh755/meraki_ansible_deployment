@@ -46,7 +46,7 @@
         move_map_marker: no
       register: off_update_dev1
       loop: "{{ lookup('dict', devices, wantlist=True) }}"
-    - name: Bind a template from a network for MX Devices
+    - name: Bind a template from a network 
       meraki_config_template:
         auth_key: "{{ auth_key }}"
         state: present
@@ -56,42 +56,6 @@
       delegate_to: localhost
       loop: "{{ lookup('dict', devices, wantlist=True) }}"
       when: "'device-1' in item.key"      
-      meraki_config_template:
-        auth_key: "{{ auth_key }}"
-        state: present
-        org_name: "{{ org_name }}"
-        net_name: "{{ item.value.network_name }}"
-        config_template: "{{ item.value.template_name }}"
-      delegate_to: localhost
-      loop: "{{ lookup('dict', devices, wantlist=True) }}"
-    - name: Bind a template from a network for MR Devices
-      meraki_config_template:
-        auth_key: "{{ auth_key }}"
-        state: present
-        org_name: "{{ org_name }}"
-        net_name: "{{ item.value.network_name }}"
-        config_template: "{{ item.value.template_name }}"
-      delegate_to: localhost
-      loop: "{{ lookup('dict', devices, wantlist=True) }}"
-      when: "'device-2' in item.key"      
-      meraki_config_template:
-        auth_key: "{{ auth_key }}"
-        state: present
-        org_name: "{{ org_name }}"
-        net_name: "{{ item.value.network_name }}"
-        config_template: "{{ item.value.template_name }}"
-      delegate_to: localhost
-      loop: "{{ lookup('dict', devices, wantlist=True) }}"
-    - name: Bind a template from a network for MS Devices
-      meraki_config_template:
-        auth_key: "{{ auth_key }}"
-        state: present
-        org_name: "{{ org_name }}"
-        net_name: "{{ item.value.network_name }}"
-        config_template: "{{ item.value.template_name }}"
-      delegate_to: localhost
-      loop: "{{ lookup('dict', devices, wantlist=True) }}"
-      when: "'device-3' in item.key"      
       meraki_config_template:
         auth_key: "{{ auth_key }}"
         state: present
