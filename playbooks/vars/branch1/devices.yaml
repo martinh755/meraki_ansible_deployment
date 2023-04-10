@@ -13,3 +13,9 @@
        static_dns: 8.8.8.8
        vlan: 1
     delegate_to: localhost
+
+ device-2:
+    network_name: Branch-1
+    template_name: MR44-Deploy
+    device_type: MR44
+    serial_no: Q3AL-AY89-LGP4
