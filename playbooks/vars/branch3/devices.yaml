@@ -7,7 +7,7 @@
     serial_no: Q2JY-XWU5-RJBZ
     wan1:
        using_static_ip: true
-       static_ip: 10.101.103.2
+       static_ip: 10.101.103.1
        static_gateway_ip: 10.101.103.254
        static_subnet_mask: 255.255.255.0
        static_dns: 8.8.8.8
