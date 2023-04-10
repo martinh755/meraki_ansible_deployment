@@ -17,5 +17,7 @@
  device-2:
     network_name: Branch-1
     template_name: MR44-Deploy
+    device_name: Branch1_mr1
     device_type: MR44
     serial_no: Q3AL-AY89-LGP4
+    delegate_to: localhost
