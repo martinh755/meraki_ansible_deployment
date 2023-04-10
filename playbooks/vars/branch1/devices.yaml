@@ -20,13 +20,11 @@
     device_name: Branch1_mr1
     device_type: MR44
     serial_no: Q3AL-AY89-LGP4
-<<<<<<< HEAD
 
  device-3:
     network_name:  Branch1
     template_name: MS250-Deploy
+    device_name: Branch1_ms1
     device_type: MS250
     serial_no: Q2LW-8Y6X-NFF2
-=======
     delegate_to: localhost
->>>>>>> 1198718bef38f1e5ea841100566da9c748f30e2d
